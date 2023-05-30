@@ -39,3 +39,31 @@ a:hover {
     color: var(--yellow);
     text-decoration: none;
 }
+
+
+/* intro styles */
+
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    padding-bottom: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--green);
+    display: block;
+}
+
+#intro h2 {
+    font-size: 3rem;
+    font-weight: normal;
+}
