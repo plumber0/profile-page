@@ -67,3 +67,90 @@ a:hover {
     font-size: 3rem;
     font-weight: normal;
 }
+
+/* contact style*/
+#contact {
+    padding: 3rem 0;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto; /* first number represent top bottom and second represent left and right*/
+    /*auto take the extra space of width(400px) and take it evenly both left and right */
+
+}
+
+#contact p:last-child {
+    margin-top: 3em;
+}
+
+/* navbar */
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--black);
+    text-decoration: none;
+    display: bloc; /* not just a text */
+}
+nav a:hover {
+    color: var(--green);
+}
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+
+/* search by class name */
+nav [class*="fa-"] {
+    font-size : 150%;
+    color: var(--green);
+}
+
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--green);
+}
+
+.button {
+    background-color: var(--green);
+    color: var(--lightgreen);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: var(--black);
+}
+
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
