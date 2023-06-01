@@ -40,11 +40,16 @@ a:hover {
     text-decoration: none;
 }
 
+.section-green {
+    background-color: var(--green);
+}
 
 /* intro styles */
 
 #intro {
-    padding-bottom: 10rem;
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #intro p {
@@ -132,17 +137,19 @@ nav h1 [class*="fa-"] {
 }
 
 .button {
-    background-color: var(--green);
-    color: var(--lightgreen);
+    background-color: var(--yellow);
+    color: var(--black);
     padding: 0.5rem;
     border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--mono);
 }
 
 .button:hover {
     color: var(--black);
 }
 
-
+/* responsive design */
 @media (min-width: 850px) {
     nav {
         max-width: 1200px;
@@ -154,3 +161,44 @@ nav h1 [class*="fa-"] {
         margin-right: auto;
     }
 }
+
+
+
+/* footer style */
+
+
+#footer {
+    width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+footer h2 {
+    font-size: 100%;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 3rem auto;
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+footer [class*="fa-"] {
+    font-size : 3rem;
+    color: var(--green);
+}
+
+footer p {
+    font-size : 0.7rem;
+    text-align: center;
+}
+
+
+
+
