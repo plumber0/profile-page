@@ -1,296 +1,291 @@
 :root {
-    --black : #363432;
-    --green : #196774;
-    --lightgreen : #90A19D;
-    --yellow: #F0941F;
-    --orange: ##EF6024;
-    --font-size: 1.3rem;
-    --mono: "Oxygen mono", monospace;
-    --sans: Oxygen, sans-serif;
+  --black: #363432;
+  --green: #196774;
+  --lightgreen: #90a19d;
+  --yellow: #f0941f;
+  --orange: ##ef6024;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: var(--sans);
-    font-size: var(--font-size);
-    color: var(--black);
-    background-color: var(--lightgreen);
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  font-size: var(--font-size);
+  color: var(--black);
+  background-color: var(--lightgreen);
 }
 
-h1, h2, h3 {
-    margin: 0;
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 a {
-    color: var(--orange);
+  color: var(--orange);
 }
 a:hover {
-    color: var(--yellow);
-    text-decoration: none;
+  color: var(--yellow);
+  text-decoration: none;
 }
 
 .section-yellow {
-    background-color: var(--yellow);
+  background-color: var(--yellow);
 }
 
 .section-green {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 .gradient {
-    background: linear-gradient(90deg, rgba(104,104,164,1) 0%, rgba(182,223,200,1) 56%);
-    height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(104, 104, 164, 1) 0%,
+    rgba(182, 223, 200, 1) 56%
+  );
+  height: 2px;
 }
-
-
 
 /* intro styles */
 
 #intro {
-    padding: 4rem 1rem 10rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #intro p {
-    padding-bottom: 1rem;
-    line-height: 1.5;
+  padding-bottom: 1rem;
+  line-height: 1.5;
 }
 
 #intro .name {
-    font-family: var(--mono);
+  font-family: var(--mono);
 }
 
 .name span {
-    font-family: var(--sans);
-    font-size: 4rem;
-    color: var(--green);
-    display: block;
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--green);
+  display: block;
 }
 
 #intro h2 {
-    font-size: 3rem;
-    font-weight: normal;
+  font-size: 3rem;
+  font-weight: normal;
 }
 
 /*  project section*/
 #projects {
-    padding: 4rem 1rem;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 #projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: calc(2.5rem * 1.5);
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
 }
 #projects h3 {
-    color: var(--lightgreen);
+  color: var(--lightgreen);
 }
 #projects h4 {
-    font-size: 1rem;
-    font-family: var(--mono);
-    margin: 0;
+  font-size: 1rem;
+  font-family: var(--mono);
+  margin: 0;
 }
 .blackbox {
-    background-color: var(--black);
-    padding: 1rem;
-    border-radius: 10px;
-    color: var(--lightgreen);
-    font-size: 1rem;
-    line-height: 1.5; /* ratio value to font not absolute */
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--lightgreen);
+  font-size: 1rem;
+  line-height: 1.5; /* ratio value to font not absolute */
 }
 #projects ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    font-size: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
 }
 #projects img {
-    margin: 2rem 0 4rem 0;
-    border-left: 1px solid var(--black);
-    border-top: 1px solid var(--black);
-    border-radius: 25px;
-    padding: 1rem;
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--black);
+  border-top: 1px solid var(--black);
+  border-radius: 25px;
+  padding: 1rem;
 }
 
 /* if width is wider than 550 this style going to have priority */
 @media (min-width: 550px) {
-    /* biggest difference between flex and grid is grid can overlap eachother */
-    article {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        gap: 1rem;
-    }
-    #projects img {
-        grid-row: 1/2;
-        grid-column: 1/6;
-    }
-    .text {
-        grid-row: 1/2;
-        grid-column: 5/11;
-        order: 2;
-        text-align: right;
-    }
-    #projects ul {
-        justify-content: flex-end;
-    }
-    #projects .reverse img {
-        grid-row: 1/2;
-        grid-column: 6/11;
-    }
-    .reverse .text {
-        grid-row: 1/2;
-        grid-column: 1/7;
-        text-align: left;
-    }
-    .reverse ul {
-        justify-content: flex-start;
-    }
+  /* biggest difference between flex and grid is grid can overlap eachother */
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+  #projects img {
+    grid-row: 1/2;
+    grid-column: 1/6;
+  }
+  .text {
+    grid-row: 1/2;
+    grid-column: 5/11;
+    order: 2;
+    text-align: right;
+  }
+  #projects ul {
+    justify-content: flex-end;
+  }
+  #projects .reverse img {
+    grid-row: 1/2;
+    grid-column: 6/11;
+  }
+  .reverse .text {
+    grid-row: 1/2;
+    grid-column: 1/7;
+    text-align: left;
+  }
+  .reverse ul {
+    justify-content: flex-start;
+  }
 }
-
 
 /* contact style*/
 #contact {
-    padding: 3rem 0;
-    text-align: center;
-    width: 400px;
-    margin: 0 auto; /* first number represent top bottom and second represent left and right*/
-    /*auto take the extra space of width(400px) and take it evenly both left and right */
-
+  padding: 3rem 0;
+  text-align: center;
+  width: 400px;
+  margin: 0 auto; /* first number represent top bottom and second represent left and right*/
+  /*auto take the extra space of width(400px) and take it evenly both left and right */
 }
 
 #contact p:last-child {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 /* navbar */
 
 nav {
-    font-family: var(--mono);
-    font-size: 80%;
-    padding: 1rem;
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
 }
 
 nav h1 a {
-    font-family: var(--sans);
+  font-family: var(--sans);
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    flex-flow: row wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 nav a {
-    color: var(--black);
-    text-decoration: none;
-    display: bloc; /* not just a text */
+  color: var(--black);
+  text-decoration: none;
+  display: bloc; /* not just a text */
 }
 nav a:hover {
-    color: var(--green);
+  color: var(--green);
 }
 nav li:first-child {
-    flex-basis: 100%;
-    text-align: center;
+  flex-basis: 100%;
+  text-align: center;
 }
-
 
 /* search by class name */
 nav [class*="fa-"] {
-    font-size : 150%;
-    color: var(--green);
+  font-size: 150%;
+  color: var(--green);
 }
 
-
 nav h1 [class*="fa-"] {
-    font-size: 100%;
-    color: var(--green);
+  font-size: 100%;
+  color: var(--green);
 }
 
 .button {
-    background-color: var(--yellow);
-    color: var(--black);
-    padding: 0.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: var(--mono);
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: var(--mono);
 }
 
 .button:hover {
-    color: var(--black);
+  color: var(--black);
 }
 
 /* responsive design */
 @media (min-width: 850px) {
-    nav {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    nav li:first-child {
-        flex-basis: auto;
-        text-align: left;
-        margin-right: auto;
-    }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
 }
-
-
 
 /* footer style */
 
-
 #footer {
-    width: 400px;
-    margin: 0 auto;
-    padding: 1rem;
+  width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 footer h2 {
-    font-size: 100%;
-    text-align: center;
+  font-size: 100%;
+  text-align: center;
 }
 
 footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 3rem auto;
-    flex-flow: row wrap;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 3rem auto;
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
 }
 
 footer [class*="fa-"] {
-    font-size : 3rem;
-    color: var(--green);
+  font-size: 3rem;
+  color: var(--green);
 }
 
 footer p {
-    font-size : 0.7rem;
-    text-align: center;
+  font-size: 0.7rem;
+  text-align: center;
 }
-
-
-
-
