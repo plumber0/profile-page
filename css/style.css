@@ -43,6 +43,12 @@ a:hover {
 .section-green {
     background-color: var(--green);
 }
+.gradient {
+    background: linear-gradient(90deg, rgba(104,104,164,1) 0%, rgba(182,223,200,1) 56%);
+    height: 2px;
+}
+
+
 
 /* intro styles */
 
