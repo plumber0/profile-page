@@ -165,7 +165,7 @@ a:hover {
     grid-column: 1/7;
     text-align: left;
   }
-  .reverse ul {
+  #projects .reverse ul {
     justify-content: flex-start;
   }
 }
